@@ -1,0 +1,17 @@
+.main {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 48px auto minmax(48px, auto);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .message-input {
+  width: 70vw !important;
+  background-color: #ffffff55;
+  border-radius: 24px;
+}

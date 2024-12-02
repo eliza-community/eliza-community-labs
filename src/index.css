@@ -1,0 +1,12 @@
+:root {
+  font-family: monospace, system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #fff;
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+}
