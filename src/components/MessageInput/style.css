@@ -2,21 +2,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .message-input {
+  width: 85vw;
   background-color: #ff9812f0;
   line-height: 24px;
   padding: 12px;
   border-radius: 24px;
-  outline: none;
   box-shadow: 4px 8px #ffb058c7, 8px 16px #ff936066;
+  margin-bottom: 36px;
+}
+
+.message-input textarea {
+  border: none;
+  outline: none;
+  display: block;
+  width: calc(100% - 40px);
+  background: none;
+  padding: 0;
   font-size: 14px;
   font-weight: 500;
-  /* color: #333; */
   color: #fff;
-  display: block;
-  margin-bottom: 36px;
+  max-height: 50vh;
+  resize: none;
+}
+
+button {
+  position: absolute;
+  right: 7.5vw;
+  bottom: 46px;
+  background: none;
   border: none;
-  width: 80vw;
+  outline: none;
+  scale: 1.4;
+  rotate: 10deg;
+  translate: -1px 2px;
 }

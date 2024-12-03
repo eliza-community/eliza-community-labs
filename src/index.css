@@ -4,7 +4,6 @@
   font-weight: 400;
   background: radial-gradient(white, #92929236);
   color: #fff;
-  --max-width: 1024px;
 }
 
 body {
@@ -16,7 +15,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: var(--max-width);
   height: 100%;
   display: flex;
   justify-content: center;
@@ -89,12 +87,3 @@ body {
     scale: 1;
   }
 }
-
-/* .bg :nth-child(3) {
-  width: 30vw;
-  max-width: var(--max-width);
-  height: 30vw;
-  max-height: var(--max-width);
-  background: #E0E2E5;
-	filter: blur(50px);
-} */

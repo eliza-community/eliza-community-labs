@@ -6,12 +6,17 @@
   border-radius: 24px;
   max-width: 70vw;
   margin-bottom: 18px;
+  text-wrap: auto;
 }
 
 .chat-line.assistant {
   box-shadow: -7px 7px #f7ca98;
   animation: assistantMessage 0.3s ease-in-out;
   clear: both;
+}
+
+.chat-list > .chat-line:last-child {
+  margin-bottom: 0 !important;
 }
 
 @keyframes assistantMessage {
@@ -42,5 +47,33 @@
   100% {
     translate: 0 0;
     opacity: 1;
+  }
+}
+
+
+.sending {
+  color: #ffa153;
+  font-size: 14px;
+  padding: 6px;
+  text-align: center;
+  text-shadow: 5px 3px 2px #ffb8b8;
+  font-weight: 800;
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    text-shadow: 5px 3px 2px #ffb8b8;
+  }
+  
+  50% {
+    opacity: 0.7;
+  text-shadow: 1px 3px 2px #ffb8b8;
+
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 5px 3px 2px #ffb8b8;
   }
 }

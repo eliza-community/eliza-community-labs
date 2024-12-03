@@ -1,28 +1,26 @@
-import { useCallback, useState } from "react"
+import { useCallback } from "react"
 import { store, useAppDispatch } from "../store"
-import { addMessage } from "../store/chatSlice"
+import { addMessage, updateSendingMessageState, updateSendingMessageErrorState } from "../store/chatSlice"
 import { chatApi } from "../apis/chat"
 
 export default function useChat() {
   const dispatch = useAppDispatch()
 
-  const [isSending, setIsSending] = useState(false)
-
   const chatWithBot = useCallback(async () => {
-    setIsSending(true)
+    dispatch(updateSendingMessageState(true))
 
     try {
       const res = await chatApi(store.getState().chat.messages)
-
-      console.log(res)
 
       const message = { ...res.data.choices[0].message, state: 1, timestamp: Date.now() }
 
       dispatch(addMessage(message))
     } catch (err) {
       console.log(err)
+
+      dispatch(updateSendingMessageErrorState(true))
     } finally {
-      setIsSending(false)
+      dispatch(updateSendingMessageState(false))
     }
   }, [dispatch])
 
@@ -33,7 +31,6 @@ export default function useChat() {
   }, [chatWithBot, dispatch])
 
   return {
-    isSending,
     sendMessage
   }  
 }
