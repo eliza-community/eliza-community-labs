@@ -7,6 +7,7 @@
   max-width: 70vw;
   margin-bottom: 18px;
   text-wrap: auto;
+  line-break: anywhere;
 }
 
 .chat-line.assistant {
