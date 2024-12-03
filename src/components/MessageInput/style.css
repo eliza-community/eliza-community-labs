@@ -15,6 +15,10 @@
   margin-bottom: 36px;
 }
 
+textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
 .message-input textarea {
   border: none;
   outline: none;
