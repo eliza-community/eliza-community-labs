@@ -1,0 +1,22 @@
+.message-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-input {
+  background-color: #ff9812f0;
+  line-height: 24px;
+  padding: 12px;
+  border-radius: 24px;
+  outline: none;
+  box-shadow: 4px 8px #ffb058c7, 8px 16px #ff936066;
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #333; */
+  color: #fff;
+  display: block;
+  margin-bottom: 36px;
+  border: none;
+  width: 80vw;
+}

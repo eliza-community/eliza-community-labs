@@ -1,0 +1,46 @@
+.chat-line {
+  font-size: 14px;
+  background: #ffa153;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 24px;
+  max-width: 70vw;
+  margin-bottom: 18px;
+}
+
+.chat-line.assistant {
+  box-shadow: -7px 7px #f7ca98;
+  animation: assistantMessage 0.3s ease-in-out;
+  clear: both;
+}
+
+@keyframes assistantMessage {
+  0% {
+    translate: -20px 20px;
+    opacity: 0.5;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+.chat-line.user {
+  box-shadow: 7px 7px #98d7f79e;
+  animation: userMessage 0.3s ease-in-out;
+  float: right;
+  background: #39a3ff;
+}
+
+@keyframes userMessage {
+  0% {
+    translate: 20px 20px;
+    opacity: 0.5;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
