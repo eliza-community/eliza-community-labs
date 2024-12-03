@@ -8,7 +8,7 @@ export default function Chat() {
 
   const nodes = useMemo(() => {
     return messages.slice(1).map((message, index) => {
-      return <p key={index} className={['chat-line', message.role].join(' ')}>{message.content}</p>
+      return <pre key={index} className={['chat-line', message.role].join(' ')}>{message.content}</pre>
     })
   }, [messages])
 
