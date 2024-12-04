@@ -41,6 +41,7 @@ const chatSlice = createSlice({
     },
     updateSendingMessageErrorState(state, action) {
       state.isSendingMessageError = action.payload
+      console.log(state.isSendingMessageError)
     }
   },
 })

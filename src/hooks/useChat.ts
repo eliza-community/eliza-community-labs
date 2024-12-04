@@ -30,7 +30,13 @@ export default function useChat() {
     chatWithBot()
   }, [chatWithBot, dispatch])
 
+  const retry = useCallback(() => {
+    dispatch(updateSendingMessageErrorState(false))
+    chatWithBot()
+  }, [chatWithBot, dispatch])
+
   return {
+    retry,
     sendMessage
   }  
 }
