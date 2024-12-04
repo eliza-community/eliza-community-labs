@@ -6,14 +6,20 @@
   flex-direction: column;
 }
 
-header h1 {
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h1 {
   margin: 0;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   color: #ff9812f0;
   text-shadow: 5px 5px #ffb8b8;
 }
 
-.body {
+.app-body {
   flex: 1;
   display: flex;
   flex-direction: column-reverse;

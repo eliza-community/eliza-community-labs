@@ -15,7 +15,7 @@
   margin-bottom: 36px;
 }
 
-textarea::placeholder {
+.message-input textarea::placeholder {
   color: rgba(255,255,255,0.6);
 }
 
@@ -33,7 +33,7 @@ textarea::placeholder {
   resize: none;
 }
 
-button {
+.message-input-container button {
   position: absolute;
   right: 7.5vw;
   bottom: 46px;
