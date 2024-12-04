@@ -8,6 +8,8 @@
   margin-bottom: 18px;
   text-wrap: auto;
   line-break: anywhere;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
 }
 
 .chat-line.assistant {
