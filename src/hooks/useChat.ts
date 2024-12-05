@@ -2,6 +2,7 @@ import { useCallback } from "react"
 import { store, useAppDispatch } from "../store"
 import { addMessage, updateSendingMessageState, updateSendingMessageErrorState } from "../store/chatSlice"
 import { chatApi } from "../apis/chat"
+import { imageGenApi } from "../apis/imageGen"
 
 export default function useChat() {
   const dispatch = useAppDispatch()
@@ -10,11 +11,19 @@ export default function useChat() {
     dispatch(updateSendingMessageState(true))
 
     try {
-      const res = await chatApi(store.getState().chat.messages)
+      const chatState = store.getState().chat
 
-      const message = { ...res.data.choices[0].message, state: 1, timestamp: Date.now() }
+      const messages = chatState.messages
 
-      dispatch(addMessage(message))
+      if (!chatState.isImgGenerateModel) {
+        const res = await imageGenApi(messages[messages.length - 1].content)
+        const message = { role: 'assistant', content: res.data.url, state: 1, timestamp: Date.now(), type: 'image' }
+        dispatch(addMessage(message))
+      } else {
+        const res = await chatApi(messages)
+        const message = { ...res.data.choices[0].message, state: 1, timestamp: Date.now(), type: 'text' }
+        dispatch(addMessage(message))
+      }
     } catch (err) {
       console.log(err)
 
@@ -25,7 +34,7 @@ export default function useChat() {
   }, [dispatch])
 
   const sendMessage = useCallback(async (message: string) => {
-    dispatch(addMessage({ role: 'user', content: message, state: 0, timestamp: Date.now() }))
+    dispatch(addMessage({ role: 'user', content: message, state: 0, timestamp: Date.now(), type: 'text' }))
 
     chatWithBot()
   }, [chatWithBot, dispatch])

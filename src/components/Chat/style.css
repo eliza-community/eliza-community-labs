@@ -2,7 +2,6 @@
   font-size: 14px;
   background: #ffa153;
   width: fit-content;
-  padding: 12px 20px;
   border-radius: 24px;
   max-width: 70vw;
   margin-bottom: 18px;
@@ -10,6 +9,8 @@
   line-break: auto;
   overflow-wrap: break-word;
   white-space: pre-line;
+  overflow: hidden;
+  line-height: 0 !important;
 }
 
 .chat-line.assistant {
@@ -20,6 +21,15 @@
 
 .chat-list > .chat-line:last-child {
   margin-bottom: 0 !important;
+}
+
+.chat-line span {
+  display: inline-block;
+  padding: 12px 20px;
+  line-height: 1.5 !important;
+}
+.chat-line img {
+  width: 100%;
 }
 
 @keyframes assistantMessage {

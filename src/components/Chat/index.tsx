@@ -19,7 +19,10 @@ export default function Chat() {
 
   const nodes = useMemo(() => {
     return messages.slice(1).map((message, index) => {
-      return <div style={{ clear: 'both' }} key={index}><pre className={['chat-line', message.role].join(' ')}>{message.content}</pre></div>
+      return <div style={{ clear: 'both' }} key={index}><pre className={['chat-line', message.role].join(' ')}>
+        {message.type === 'text' && <span>{message.content}</span>}
+        {message.type === 'image' && <img src={message.content} alt="" />}
+      </pre></div>
     })
   }, [messages])
 
