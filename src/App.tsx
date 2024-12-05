@@ -8,11 +8,19 @@ import ConnectWalletButton from './components/ConnectWalletButton'
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import { clusterApiUrl } from '@solana/web3.js';
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom';
+import { SolflareWalletAdapter } from '@solana/wallet-adapter-solflare';
+import { TorusWalletAdapter } from '@solana/wallet-adapter-torus';
+import { CoinbaseWalletAdapter } from '@solana/wallet-adapter-coinbase';
 
 function SolanaWalletProvider ({ children }: { children: React.ReactNode }) {
   const endpoint = clusterApiUrl('mainnet-beta')
 
-  const wallets = [new PhantomWalletAdapter()]
+  const wallets = [
+    new PhantomWalletAdapter(), 
+    new SolflareWalletAdapter(),
+    new TorusWalletAdapter(),
+    new CoinbaseWalletAdapter()
+  ]
 
   return <ConnectionProvider endpoint={endpoint}>
     <WalletProvider wallets={wallets} autoConnect>

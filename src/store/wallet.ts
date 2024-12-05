@@ -2,15 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 export interface WalletState {
-  isConnected: boolean;
-  address: string;
-  $elizaBalance: number;
+  has$eliza: number;
 }
 
 const initialState: WalletState = {
-  isConnected: false,
-  address: '',
-  $elizaBalance: 0,
+  has$eliza: 0,
 }
 
 const walletSlice = createSlice({
@@ -18,9 +14,7 @@ const walletSlice = createSlice({
   initialState,
   reducers: {
     updateWalletState: (state, action) => {
-      state.isConnected = action.payload.isConnected;
-      state.address = action.payload.address;
-      state.$elizaBalance = action.payload.$elizaBalance;
+      state.has$eliza = action.payload.has$eliza;
     }
   }
 })
