@@ -103,3 +103,21 @@
     text-shadow: 5px 3px 2px #ffb8b8;
   }
 }
+
+.plugin-button {
+  margin: 6px 20px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.plugin-button button {
+  background: orange;
+  padding: 6px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
