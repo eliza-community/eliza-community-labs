@@ -102,7 +102,7 @@
 }
 
 h1.wallet-adapter-modal-title:after {
-    content: "Eliza holders can use the image generation feature for free.";
+    content: "$eliza holders can use the image generation feature for free.";
     font-size: 12px;
     line-height: 1.5;
     padding-top: 6px;
