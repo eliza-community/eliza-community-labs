@@ -99,6 +99,7 @@
   flex-direction: column;
   line-height: 1.5 !important;
   font-size: 20px !important;
+  padding: 64px 24px 48px;
 }
 
 h1.wallet-adapter-modal-title:after {
