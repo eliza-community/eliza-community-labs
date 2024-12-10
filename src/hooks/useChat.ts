@@ -37,9 +37,6 @@ export default function useChat() {
     dispatch(addMessage({ role: 'user', content: message, state: 0, timestamp: Date.now(), type: 'text' }))
 
     chatWithBot()
-    chatWithBot()
-    chatWithBot()
-    chatWithBot()
   }, [chatWithBot, dispatch])
 
   const retry = useCallback(() => {
