@@ -18,7 +18,8 @@ export default async (req, context) => {
       tools: [{
         'type': 'web_search',
         'web_search': {
-          enable: true
+          enable: true,
+          search_result: true
         }
       }]
     }, {

@@ -2,14 +2,15 @@
   font-size: 14px;
   background: #ffa153;
   width: fit-content;
-  padding: 12px 20px;
   border-radius: 24px;
   max-width: 70vw;
   margin-bottom: 18px;
   text-wrap: auto;
-  line-break: auto;
-  overflow-wrap: break-word;
+  line-break: normal;
+  overflow-wrap: anywhere;
   white-space: pre-line;
+  overflow: hidden;
+  line-height: 0 !important;
 }
 
 .chat-line.assistant {
@@ -20,6 +21,15 @@
 
 .chat-list > .chat-line:last-child {
   margin-bottom: 0 !important;
+}
+
+.chat-line span {
+  display: inline-block;
+  padding: 12px 20px;
+  line-height: 1.5 !important;
+}
+.chat-line img {
+  width: 100%;
 }
 
 @keyframes assistantMessage {
@@ -58,9 +68,7 @@
   font-size: 14px;
   padding: 6px;
   text-align: center;
-  /* text-shadow: 5px 3px 2px #ffb8b8; */
   font-weight: 800;
-  /* animation: fade 2s ease-in-out infinite; */
 }
 
 .error span {
@@ -92,4 +100,28 @@
     opacity: 1;
     text-shadow: 5px 3px 2px #ffb8b8;
   }
+}
+
+.plugin-button {
+  margin: 0 7.5vw 12px 7.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0;
+}
+
+.plugin-button.active button {
+    background-color: #39a3ff;
+}
+
+.plugin-button button {
+  background: orange;
+  padding: 6px 4px;
+  border-radius: 50%;
+  outline: none !important;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }

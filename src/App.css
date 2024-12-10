@@ -6,17 +6,106 @@
   flex-direction: column;
 }
 
-header h1 {
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.app-header h1 {
   margin: 0;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   color: #ff9812f0;
   text-shadow: 5px 5px #ffb8b8;
 }
 
-.body {
+.app-body {
   flex: 1;
   display: flex;
   flex-direction: column-reverse;
   height: calc(100% - 88px);
   overflow: hidden;
+}
+
+.wallet-adapter-modal {
+  background: unset !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background: #ff9812f0 !important;
+  box-shadow: 9px 9px #ff9f57c4 !important;
+  font-family: inherit !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background: #fff !important;
+}
+
+.wallet-adapter-modal-button-close svg {
+  fill: #ff9812f0 !important;
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background: #ffba48a6 !important;
+}
+
+.wallet-adapter-dropdown .wallet-adapter-button i {
+  display: none !important;
+}
+
+.wallet-adapter-dropdown-list {
+  background: #ff9812f0 !important;
+  box-shadow: 0px 7px 13px rgb(255 192 85 / 60%) !important;
+  font-family: inherit !important;
+}
+
+.wallet-adapter-dropdown-list-item{
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+  background: #ffba48a6 !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #ff9812f0 !important;
+  padding: 6px !important;
+  font-size: 12px !important;
+  height: auto !important;
+  line-height: unset !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+  box-shadow: 4px 4px #ff9f57c4 !important;
+}
+
+.wallet-adapter-modal-title {
+  padding-bottom: 18px !important;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  padding: 0 24px !important;
+}
+
+.disabled {
+  filter: grayscale(1);
+}
+
+.wallet-adapter-modal-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5 !important;
+  font-size: 20px !important;
+}
+
+h1.wallet-adapter-modal-title:after {
+    content: "Eliza holders can use the image generation feature for free.";
+    font-size: 12px;
+    line-height: 1.5;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #f2f2f2;
 }
