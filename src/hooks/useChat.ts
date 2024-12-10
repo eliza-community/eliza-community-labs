@@ -15,7 +15,7 @@ export default function useChat() {
 
       const messages = chatState.messages
 
-      if (!chatState.isImgGenerateModel) {
+      if (chatState.isImgGenerateModel) {
         const res = await imageGenApi(messages[messages.length - 1].content)
         const message = { role: 'assistant', content: res.data.url, state: 1, timestamp: Date.now(), type: 'image' }
         dispatch(addMessage(message))
@@ -36,6 +36,9 @@ export default function useChat() {
   const sendMessage = useCallback(async (message: string) => {
     dispatch(addMessage({ role: 'user', content: message, state: 0, timestamp: Date.now(), type: 'text' }))
 
+    chatWithBot()
+    chatWithBot()
+    chatWithBot()
     chatWithBot()
   }, [chatWithBot, dispatch])
 

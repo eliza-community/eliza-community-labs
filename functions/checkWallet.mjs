@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { clusterApiUrl } from '@solana/web3.js'
 
 const elizaCA = 'wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o'
 
@@ -11,7 +10,7 @@ export default async function checkWallet(req, context) {
   if (!address) new Response('address is required', { status: 405 })
     
   try {
-    const solanaUrl = clusterApiUrl('mainnet-beta')
+    const solanaUrl = 'https://solana-mainnet.g.alchemy.com/v2/AetIHMjtayplVImzGwib7_Tamf4EfnOi'
 
     console.log(solanaUrl)
 
@@ -22,20 +21,21 @@ export default async function checkWallet(req, context) {
       params: [
         address,
         {
-          programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'
+          mint: elizaCA
+          // programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'
         },
         {
-          encoding: 'json_parse'
+          encoding: 'jsonParsed'
         }
       ]
-    }, {
-      timeout: 999999
     })
+
+    console.log(res.data)
 
     const has_$eliza = res.data.result.value.some((token) => token.account.data.parsed.info.mint === elizaCA)
 
     return new Response(JSON.stringify({ has_$eliza }), { status: 200 })
-  } catch (error) {
+  } catch (err) {
     return new Response(err?.message || err?.response?.data?.message || 'error', { status: 500 })
   }
 }

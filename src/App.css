@@ -89,3 +89,23 @@
   font-size: 14px !important;
   padding: 0 24px !important;
 }
+
+.disabled {
+  filter: grayscale(1);
+}
+
+.wallet-adapter-modal-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5 !important;
+  font-size: 20px !important;
+}
+
+h1.wallet-adapter-modal-title:after {
+    content: "Eliza holders can use the image generation feature for free.";
+    font-size: 12px;
+    line-height: 1.5;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #f2f2f2;
+}

@@ -39,12 +39,9 @@ export default function ConnectWalletButton() {
     }
   }, [connected, publicKey, checkWallet, dispatch])
 
-
-
   return (
     <WalletModalProvider>
       <WalletMultiButton />
-      {/* <WalletConnectButton /> */}
   </WalletModalProvider>
   );
 }

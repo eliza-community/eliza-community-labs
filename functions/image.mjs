@@ -12,6 +12,7 @@ export default async function imageGen(req, context) {
     try {
       const response = await axios.post('https://api.siliconflow.cn/v1/images/generations', {
         model: 'black-forest-labs/FLUX.1-schnell',
+        // model: 'stabilityai/stable-diffusion-3-medium',
         prompt,
         image_size: '1024x1024',
         seed: Math.floor(Math.random() * 9999999999),
