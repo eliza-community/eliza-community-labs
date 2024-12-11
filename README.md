@@ -19,5 +19,5 @@ What was their goal? To centralize control, pump the token for profit, and shut 
 ### Links
 [website](https://eliza-community.netlify.app/)
 [@elizacommunity](https://x.com/elizacommunity)
-[telegram](https://t.me/elizactocommunity)
+[telegram](https://t.me/elizactoglobal)
 [dexscreener](https://dexscreener.com/solana/2pofQcvn4wysAzpSqPPxQ4cSPBtKQLSEHF9q5x77Avm7)
