@@ -10,7 +10,7 @@ export default async function checkWallet(req, context) {
   if (!address) new Response('address is required', { status: 405 })
     
   try {
-    const solanaUrl = 'https://solana-mainnet.g.alchemy.com/v2/AetIHMjtayplVImzGwib7_Tamf4EfnOi'
+    const solanaUrl = 'https://solana-mainnet.g.alchemy.com/v2/' + Netlify.env.get('ALCHEMY_API_KEY')
 
     console.log(solanaUrl)
 
