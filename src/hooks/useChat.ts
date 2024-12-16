@@ -8,6 +8,7 @@ export default function useChat() {
   const dispatch = useAppDispatch()
 
   const chatWithBot = useCallback(async () => {
+    dispatch(updateSendingMessageErrorState(false))
     dispatch(updateSendingMessageState(true))
 
     try {
