@@ -1,4 +1,4 @@
-[eliza community labs](https://eliza-community-labs.netlify.app/)
+[eliza community labs](https://labs.elizacto.com)
 
 ### contract-address(CA): wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o
 
@@ -17,7 +17,7 @@ But things started to shift. Shaw sold off all his $eliza (lowercase) and at the
 What was their goal? To centralize control, pump the token for profit, and shut the community out of the decision-making process. $ELIZA became just another tool for market manipulation, leaving $eliza and the principles of decentralization in the dust.
 
 ### Links
-[website](https://eliza-community.netlify.app/)
+[website](https://elizacto.com)
 [@elizacommunity](https://x.com/elizacommunity)
 [telegram](https://t.me/elizactoglobal)
 [dexscreener](https://dexscreener.com/solana/2pofQcvn4wysAzpSqPPxQ4cSPBtKQLSEHF9q5x77Avm7)
